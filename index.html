@@ -1,0 +1,188 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#07111f">
+  <meta name="description" content="Acesse os canais digitais da GNIA Solutions.">
+  <title>GNIA Solutions | Conecte-se</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      padding: 32px 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #ffffff;
+      background:
+        radial-gradient(ellipse at top, #12345a 0%, #07111f 55%, #030811 100%);
+    }
+
+    .container {
+      width: 100%;
+      max-width: 410px;
+      text-align: center;
+    }
+
+    .logo {
+      width: 78px;
+      height: 78px;
+      margin: 0 auto 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #28a8ff;
+      border-radius: 22px;
+      color: #35b5ff;
+      font-size: 27px;
+      font-weight: 800;
+      letter-spacing: -2px;
+      box-shadow: 0 0 30px #008cff25;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 27px;
+      letter-spacing: 1px;
+    }
+
+    .subtitle {
+      margin: 10px 0 28px;
+      color: #b8c9dc;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .links {
+      display: grid;
+      gap: 13px;
+    }
+
+    .link {
+      min-height: 58px;
+      padding: 17px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      border: 1px solid #ffffff20;
+      border-radius: 14px;
+      background: #ffffff0c;
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 700;
+      transition: transform .15s, background .15s;
+    }
+
+    .link:hover {
+      transform: translateY(-2px);
+      background: #168bdf30;
+    }
+
+    .google {
+      border-color: #4285f455;
+    }
+
+    .instagram {
+      border-color: #e1306c55;
+    }
+
+    .whatsapp {
+      border-color: #25d36666;
+    }
+
+    .note {
+      margin-top: 17px;
+      color: #91a5bc;
+      font-size: 12px;
+      line-height: 1.6;
+    }
+
+    footer {
+      margin-top: 35px;
+      color: #8297ae;
+      font-size: 11px;
+      letter-spacing: 1px;
+    }
+
+    footer strong {
+      color: #35b5ff;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="container">
+    <div class="logo" aria-label="GNIA">GNIA</div>
+
+    <h1>GNIA SOLUTIONS</h1>
+
+    <p class="subtitle">
+      Tecnologia que conecta você ao seu negócio.<br>
+      Escolha uma das opções abaixo.
+    </p>
+
+    <nav class="links" aria-label="Canais digitais">
+
+      <a class="link google"
+         id="googleLink"
+         href="#"
+         target="_blank"
+         rel="noopener">
+        ⭐ Avaliar no Google
+      </a>
+
+      <a class="link instagram"
+         href="https://www.instagram.com/gniasolutions/"
+         target="_blank"
+         rel="noopener">
+        📸 Instagram
+      </a>
+
+      <a class="link whatsapp"
+         href="https://wa.me/5561982614683"
+         target="_blank"
+         rel="noopener">
+        💬 Falar pelo WhatsApp
+      </a>
+
+    </nav>
+
+    <p class="note" id="googleNote">
+      O link de avaliação do Google será configurado em breve.
+    </p>
+
+    <footer>
+      TECNOLOGIA NFC POR<br>
+      <strong>GNIA SOLUTIONS</strong>
+    </footer>
+  </main>
+
+  <script>
+    // Insira aqui o link de avaliação do Google.
+    const GOOGLE_URL = "";
+
+    const googleLink = document.getElementById("googleLink");
+    const googleNote = document.getElementById("googleNote");
+
+    if (GOOGLE_URL.trim() !== "") {
+      googleLink.href = GOOGLE_URL;
+      googleNote.hidden = true;
+    } else {
+      googleLink.addEventListener("click", function(event) {
+        event.preventDefault();
+        alert("O link de avaliação do Google ainda será configurado.");
+      });
+    }
+  </script>
+</body>
+</html>
